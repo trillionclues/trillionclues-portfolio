@@ -1,14 +1,14 @@
 "use client";
 
 import { MotionDiv } from "@/lib/framer";
-import { Monitor, Smartphone, Code, Zap, Cpu, Database } from "lucide-react";
+import { Code, Zap, Cpu, Database } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 function LoadingRoutes() {
-  const techIcons = [Monitor, Smartphone, Code, Zap, Cpu, Database];
+  const techIcons = [Code, Zap, Cpu, Database];
   const [currentStep, setCurrentStep] = useState(0);
   const steps = [
-    "Building responsive pixels...",
+    "Building pixels...",
     "Optimizing bundles...",
     "Loading containers...",
   ];
@@ -22,15 +22,15 @@ function LoadingRoutes() {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-white/90 z-50">
-      <div className="flex flex-col items-center justify-center space-y-8 w-full max-w-md px-4">
+      <div className="flex flex-col items-center justify-center space-y-6 w-full max-w-sm px-4">
         <MotionDiv
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           className="relative"
         >
-          <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center shadow-lg">
-            <span className="text-white font-normal text-2xl italic">T.</span>
+          <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center shadow-lg">
+            <span className="text-white font-normal text-xl italic">T.</span>
           </div>
           <MotionDiv
             initial={{ scale: 0.8, opacity: 0.7 }}
@@ -43,8 +43,8 @@ function LoadingRoutes() {
             className="absolute inset-0 border-2 border-black rounded-full"
           />
         </MotionDiv>
-        <div className="w-full relative">
-          <div className="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
+        <div className="w-64 relative">
+          <div className="w-full h-1 bg-gray-200 rounded-full overflow-hidden">
             <MotionDiv
               initial={{ width: 0 }}
               animate={{ width: "100%" }}
@@ -67,13 +67,13 @@ function LoadingRoutes() {
               />
             </MotionDiv>
           </div>
-          <div className="flex justify-between w-full">
-            {[...Array(5)].map((_, i) => (
-              <div key={i} className="w-0.5 h-3 bg-gray-300" />
+          <div className="flex justify-between w-full mt-1">
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="w-0.5 h-2 bg-gray-300" />
             ))}
           </div>
         </div>
-        <div className="relative w-full overflow-hidden h-12">
+        <div className="relative w-64 overflow-hidden h-10">
           <MotionDiv
             animate={{
               x: ["0%", "-100%"],
@@ -83,21 +83,21 @@ function LoadingRoutes() {
               repeat: Infinity,
               ease: "linear",
             }}
-            className="flex space-x-8 absolute"
+            className="flex space-x-6 absolute"
           >
             {[...techIcons, ...techIcons].map((Icon, index) => (
               <div key={index} className="flex-shrink-0">
                 <MotionDiv
                   whileHover={{ scale: 1.1 }}
-                  className="p-2 rounded-full bg-gray-100"
+                  className="p-1.5 rounded-full bg-gray-100"
                 >
-                  <Icon className="w-6 h-6 text-gray-600" />
+                  <Icon className="w-5 h-5 text-gray-600" />
                 </MotionDiv>
               </div>
             ))}
           </MotionDiv>
         </div>
-        <div className="h-10 text-center">
+        <div className="h-10 text-center w-64">
           <MotionDiv
             key={currentStep}
             initial={{ opacity: 0, y: 10 }}
@@ -106,12 +106,12 @@ function LoadingRoutes() {
             transition={{ duration: 0.5 }}
             className="font-mono text-sm text-gray-500"
           >
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center justify-center gap-1">
               {["💻", "📦", "⚡"].map((icon, index) => (
                 <MotionDiv
                   key={index}
                   animate={{
-                    y: [0, -10, 0],
+                    y: [0, -8, 0],
                     opacity: [0.6, 1, 0.6],
                   }}
                   transition={{
@@ -120,17 +120,17 @@ function LoadingRoutes() {
                     delay: index * 0.3,
                   }}
                 >
-                  <span className="inline-block">{icon}</span>
+                  <span className="inline-block text-sm">{icon}</span>{" "}
                 </MotionDiv>
               ))}
-              <div>
+              <div className="text-xs">
                 {steps[currentStep]}
                 <span className="text-gray-400 animate-pulse"></span>
               </div>
             </div>
 
             {currentStep === 2 && (
-              <p className="text-xs text-gray-400 mt-1">
+              <p className="text-[0.45rem] text-gray-400 mt-1">
                 {`> docker run -it portfolio:latest`}
               </p>
             )}
