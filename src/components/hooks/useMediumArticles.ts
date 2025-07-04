@@ -26,7 +26,7 @@ export const useMediumArticles = (
       const data = await response.json();
 
       if (data.status === "ok") {
-        const processedArticles = data.items.map((article: any) => {
+        const processedArticles = data.items.map((article: MediumPost) => {
           const imgRegex = /<img[^>]+src="([^">]+)"/;
           const match = article.content.match(imgRegex);
           const thumbnail = match ? match[1] : "";
