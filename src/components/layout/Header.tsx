@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, ChevronUp } from "lucide-react";
@@ -10,8 +10,27 @@ import { NavItems } from "@/data";
 
 export function Header() {
   const pathname = usePathname();
-  const activeSection = pathname.split("/")[1] || ("home" as Section);
+  const activeSection = (
+    pathname === "/" ? "home" : pathname.split("/")[1]
+  ) as Section;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node)
+      ) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <MotionHeader
@@ -27,7 +46,9 @@ export function Header() {
             className="w-6 h-6 rounded-full bg-black flex items-center justify-center cursor-pointer"
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <span className="text-white font-normal text-md italic">T.</span>
+            <MotionSpan className="text-white font-normal text-md italic">
+              T.
+            </MotionSpan>
           </MotionDiv>
         </Link>
 
@@ -35,7 +56,7 @@ export function Header() {
           {NavItems.map((item) => (
             <Link key={item.id} href={item.path} passHref>
               <MotionB
-                className={`relative py-2 text-xs font-medium cursor-pointer ${
+                className={`relative py-1 text-xs font-medium cursor-pointer ${
                   activeSection === item.id
                     ? "text-gray-900"
                     : "text-gray-500 hover:text-gray-900"
@@ -60,7 +81,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="md:hidden flex items-center">
+        <div className="md:hidden flex items-center" ref={mobileMenuRef}>
           <MotionB
             className="flex items-center gap-1 text-xs font-medium text-gray-900"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -81,20 +102,22 @@ export function Header() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="absolute top-full right-6 mt-2 w-40 bg-white rounded-md shadow-lg py-1 z-50"
+              className="absolute top-full right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-100"
             >
               {NavItems.map((item) => (
                 <Link key={item.id} href={item.path} passHref>
                   <MotionB
                     className={`block px-4 py-2 text-sm ${
                       activeSection === item.id
-                        ? "bg-gray-100 text-gray-900"
+                        ? "bg-gray-100 text-gray-900 font-medium"
                         : "text-gray-700 hover:bg-gray-50"
                     }`}
                     whileHover={{ x: 2 }}
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {item.label}
+                    <div className="flex items-center justify-between">
+                      {item.label}
+                    </div>
                   </MotionB>
                 </Link>
               ))}

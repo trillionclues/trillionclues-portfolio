@@ -18,7 +18,6 @@ export const slideInFromTop = {
   transition: { duration: 0.5 },
 };
 
-// flip animation preset
 export const flipText = {
   initial: { rotateX: 0 },
   animate: { rotateX: 360 },

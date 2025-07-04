@@ -20,7 +20,6 @@ export const AboutSection = () => {
       <div className="max-w-4xl w-full mx-auto px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <AboutAsideLeft textSkew={textSkew} textTranslateX={textTranslateX} />
-
           <AboutAsideRight />
         </div>
       </div>

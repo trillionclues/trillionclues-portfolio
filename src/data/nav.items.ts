@@ -19,14 +19,14 @@ export const mediaLinks = [
     icon: "/linkedin.svg",
   },
   {
+    name: "Github",
+    url: "https://www.github.com/in/trillionclues/",
+    icon: "/github.svg",
+  },
+  {
     name: "Twitter",
     url: "https://twitter.com/trillionclues",
     icon: "/twitter.svg",
-  },
-  {
-    name: "Medium",
-    url: "http://trillionclues.medium.com/",
-    icon: "/medium.svg",
   },
 ];
 
