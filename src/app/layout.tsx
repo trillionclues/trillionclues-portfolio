@@ -3,6 +3,8 @@ import { Andika, Arvo } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
 import { Footer, Header } from "@/components/layout";
+import LoadingRoutes from "@/components/ui/LoadingRoutes";
+import DelayWrapper from "@/components/ui/DelayWrapper";
 
 const arvo = Arvo({
   subsets: ["latin"],
@@ -69,12 +71,14 @@ export default function RootLayout({
       <body
         className={`${arvo.variable} ${andika.variable} antialiased min-h-screen flex flex-col bg-white/80`}
       >
-        <Suspense fallback={<div>Loading...</div>}>
-          <Header />
-          <main className="flex-1 pt-[height-of-header] pb-[height-of-footer]">
-            {children}
-          </main>
-          <Footer />
+        <Suspense fallback={<LoadingRoutes />}>
+          <DelayWrapper>
+            <Header />
+            <main className="flex-1 pt-[height-of-header] pb-[height-of-footer]">
+              {children}
+            </main>
+            <Footer />
+          </DelayWrapper>
         </Suspense>
       </body>
     </html>
