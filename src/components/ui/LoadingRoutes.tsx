@@ -125,7 +125,7 @@ function LoadingRoutes() {
               ))}
               <div>
                 {steps[currentStep]}
-                <span className="text-gray-400 animate-pulse">_</span>
+                <span className="text-gray-400 animate-pulse"></span>
               </div>
             </div>
 

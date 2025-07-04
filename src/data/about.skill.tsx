@@ -33,9 +33,9 @@ export const skills = [
 export const FirstAboutParagraph = () => {
   return (
     <MotionP className="text-sm xs:text-base md:text-md lg:text-base">
-      I'm a passionate frontend and mobile developer specializing in client-side
-      web development, and I've since expanded into mobile development with
-      plans to specialize further in Android development.
+      I&rsquo;m a passionate frontend and mobile developer specializing in
+      client-side web development, and I&rsquo;ve since expanded into mobile
+      development with plans to specialize further in Android development.
     </MotionP>
   );
 };
@@ -46,7 +46,7 @@ export const SecondAboutParagraph = () => {
       I believe in writing clean, maintainable code and creating digital
       experiences that not only look great but perform exceptionally well. Every
       project is an opportunity to learn something new and push the boundaries
-      of what's possible.
+      of what&rsquo;s possible.
     </MotionP>
   );
 };
@@ -54,7 +54,7 @@ export const SecondAboutParagraph = () => {
 export const ThirdAboutParagraph = () => {
   return (
     <MotionP className="text-sm xs:text-base md:text-md lg:text-base">
-      When I'm not coding, you can find me exploring new technologies,
+      When I&rsquo;m not coding, you can find me exploring new technologies,
       contributing to open source projects, or sharing insights through my
       writing on Medium.
     </MotionP>

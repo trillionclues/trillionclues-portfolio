@@ -11,10 +11,10 @@ export const HeroSectionText = () => {
         className="space-y-2 leading-relaxed"
       >
         <MotionP className="text-sm xs:text-base md:text-md lg:text-base text-gray-600 leading-relaxed">
-          I'm Excel Nwachukwu, a frontend and mobile engineer based in Lagos,
-          Nigeria. As a software developer and design enthusiast, I'm passionate
-          about building intuitive, and performant frontend facing applications
-          in remittance, e-commerce, and fintech industries.
+          I&rsquo;m Excel Nwachukwu, a frontend and mobile engineer based in
+          Lagos, Nigeria. As a software developer and design enthusiast,
+          I&rsquo;m passionate about building intuitive, and performant frontend
+          facing applications in remittance, e-commerce, and fintech industries.
         </MotionP>
 
         <MotionP className="text-sm xs:text-base md:text-md lg:text-base text-gray-600 leading-relaxed">
@@ -31,9 +31,9 @@ export const HeroSectionText = () => {
         transition={{ duration: 1, delay: 1, ease: "easeOut" }}
       >
         <MotionP>
-          Currently, I’m building a multitenant cross-border remittance platform
-          and exploring centralized and decentralized finance and hackathons at
-          XendFinance.
+          Currently, I&rsquo;m building a multitenant cross-border remittance
+          platform and exploring centralized and decentralized finance and
+          hackathons at XendFinance.
         </MotionP>
       </MotionDiv>
     </>
