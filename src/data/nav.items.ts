@@ -1,4 +1,4 @@
-import { Section } from "@/types/nav_items";
+import { Section } from "@/types/nav.items";
 
 export const NavItems = [
   { id: "about" as Section, label: "About", path: "/about" },
@@ -27,5 +27,26 @@ export const mediaLinks = [
     name: "Medium",
     url: "http://trillionclues.medium.com/",
     icon: "/medium.svg",
+  },
+];
+
+export const contactFormTexts = [
+  {
+    id: "name",
+    label: "Name",
+    placeholder: "How should I address you?",
+    type: "text",
+  },
+  {
+    id: "email",
+    label: "Email",
+    placeholder: "Enter your best contact email",
+    type: "email",
+  },
+  {
+    id: "message",
+    label: "Project Details",
+    placeholder: "Tell me about the role, and technologies involved...",
+    type: "textarea",
   },
 ];

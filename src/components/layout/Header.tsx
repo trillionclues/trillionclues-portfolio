@@ -1,15 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Section } from "@/types/nav_items";
+import { Section } from "@/types/nav.items";
 import { MotionB, MotionDiv, MotionHeader, MotionSpan } from "@/lib/framer";
 import { NavItems } from "@/data/nav.items";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 function Header() {
   const pathname = usePathname();
   const activeSection = pathname.split("/")[1] || ("home" as Section);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <MotionHeader
@@ -57,6 +59,48 @@ function Header() {
             </Link>
           ))}
         </nav>
+
+        <div className="md:hidden flex items-center">
+          <MotionB
+            className="flex items-center gap-1 text-xs font-medium text-gray-900"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            whileTap={{ scale: 0.95 }}
+          >
+            {NavItems.find((item) => item.id === activeSection)?.label ||
+              "Menu"}
+            {mobileMenuOpen ? (
+              <ChevronUp className="w-4 h-4" />
+            ) : (
+              <ChevronDown className="w-4 h-4" />
+            )}
+          </MotionB>
+
+          {mobileMenuOpen && (
+            <MotionDiv
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="absolute top-full right-6 mt-2 w-40 bg-white rounded-md shadow-lg py-1 z-50"
+            >
+              {NavItems.map((item) => (
+                <Link key={item.id} href={item.path} passHref>
+                  <MotionB
+                    className={`block px-4 py-2 text-sm ${
+                      activeSection === item.id
+                        ? "bg-gray-100 text-gray-900"
+                        : "text-gray-700 hover:bg-gray-50"
+                    }`}
+                    whileHover={{ x: 2 }}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </MotionB>
+                </Link>
+              ))}
+            </MotionDiv>
+          )}
+        </div>
       </div>
     </MotionHeader>
   );

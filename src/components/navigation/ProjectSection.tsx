@@ -6,6 +6,7 @@ import { ExternalLink, Code, ArrowLeft } from "lucide-react";
 import { useRef, useState } from "react";
 import { useTransform, useScroll, motion } from "framer-motion";
 import Link from "next/link";
+import BackButton from "../ui/BackButton";
 
 const categories = [
   "All",
@@ -52,27 +53,14 @@ const ProjectSection = () => {
   return (
     <div ref={containerRef} className="flex-1 pt-8 pb-8">
       <div className="max-w-4xl w-full mx-auto px-6 lg:px-8 py-12">
-        <MotionDiv
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-5"
-        >
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-black transition-colors group"
-          >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            Back to Home
-          </Link>
-        </MotionDiv>
+        <BackButton href="/" text="Back to Home" />
         <MotionDiv
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <MotionH2 className="text-3xl lg:text-4xl font-light mb-4">
+          <MotionH2 className="text-2xl xs:text-2.5xl sm:text-3xl md:text-3.5xl lg:text-4xl xl:text-4.5xl font-light mb-4">
             Selected Projects
           </MotionH2>
           <MotionP className="text-gray-600 max-w-2xl">

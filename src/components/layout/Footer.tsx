@@ -48,9 +48,9 @@ export default function Footer() {
           <span className="text-sm text-gray-400">Lagos, NG.</span>
 
           <div className="flex items-center space-x-2">
-            <div className="relative w-5 h-5">
+            <div className="relative w-6 h-6">
               <div
-                className="absolute top-1/2 left-1/2 w-0.5 h-1.5 bg-gray-400 origin-bottom"
+                className="absolute top-1/2 left-1/2 w-0.5 h-3 bg-gray-600 origin-bottom"
                 style={{
                   transform: `translate(-50%, -100%) rotate(${
                     (hours % 12) * 30 + minutes * 0.5
@@ -58,18 +58,18 @@ export default function Footer() {
                 }}
               />
               <div
-                className="absolute top-1/2 left-1/2 w-0.5 h-2 bg-gray-500 origin-bottom"
+                className="absolute top-1/2 left-1/2 w-0.5 h-4 bg-gray-700 origin-bottom"
                 style={{
                   transform: `translate(-50%, -100%) rotate(${minutes * 6}deg)`,
                 }}
               />
               <div
-                className="absolute top-1/2 left-1/2 w-px h-2 bg-red-400 origin-bottom"
+                className="absolute top-1/2 left-1/2 w-px h-4 bg-red-500 origin-bottom"
                 style={{
                   transform: `translate(-50%, -100%) rotate(${seconds * 6}deg)`,
                 }}
               />
-              <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-gray-600 rounded-full transform -translate-x-1/2 -translate-y-1/2" />
+              <div className="absolute top-1/2 left-1/2 w-1.5 h-1.5 bg-gray-700 rounded-full transform -translate-x-1/2 -translate-y-1/2" />
             </div>
             <span className="text-xs text-gray-500">
               {hours.toString().padStart(2, "0")}:

@@ -11,6 +11,7 @@ import { useScroll, useTransform } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
+import BackButton from "../ui/BackButton";
 
 const AboutSection = () => {
   const containerRef = useRef(null);
@@ -37,7 +38,7 @@ const AboutSection = () => {
               x: textTranslateX,
             }}
           >
-            <MotionH2 className="text-3xl lg:text-4xl font-light">
+            <MotionH2 className="text-2xl xs:text-2.5xl sm:text-3xl md:text-3.5xl lg:text-4xl xl:text-4.5xl font-light">
               About Me
             </MotionH2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
@@ -69,30 +70,20 @@ const AboutSection = () => {
                   }}
                   className="flex gap-4 items-start"
                 >
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
                     {skill.icon}
                   </div>
                   <div>
-                    <MotionH4 className="font-medium">{skill.title}</MotionH4>
-                    <MotionP className="text-gray-600 text-sm">
+                    <MotionH4 className="font-medium text-sm">
+                      {skill.title}
+                    </MotionH4>
+                    <MotionP className="text-gray-600 text-xs">
                       {skill.desc}
                     </MotionP>
                   </div>
                 </MotionDiv>
               ))}
-              <MotionDiv
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <Link
-                  href="/"
-                  className="inline-flex items-center gap-2 text-gray-600 hover:text-black transition-colors group"
-                >
-                  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                  Back to Home
-                </Link>
-              </MotionDiv>
+              <BackButton href="/" text="Back to Home" />
             </div>
           </MotionDiv>
         </div>

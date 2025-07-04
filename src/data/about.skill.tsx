@@ -21,7 +21,7 @@ export const skills = [
 
 export const FirstAboutParagraph = () => {
   return (
-    <MotionP>
+    <MotionP className="text-sm xs:text-base md:text-md lg:text-base">
       I'm a passionate frontend and mobile developer specializing in client-side
       web development, and I've since expanded into mobile development with
       plans to specialize further in Android development.
@@ -31,7 +31,7 @@ export const FirstAboutParagraph = () => {
 
 export const SecondAboutParagraph = () => {
   return (
-    <MotionP>
+    <MotionP className="text-sm xs:text-base md:text-md lg:text-base">
       I believe in writing clean, maintainable code and creating digital
       experiences that not only look great but perform exceptionally well. Every
       project is an opportunity to learn something new and push the boundaries
@@ -42,7 +42,7 @@ export const SecondAboutParagraph = () => {
 
 export const ThirdAboutParagraph = () => {
   return (
-    <MotionP>
+    <MotionP className="text-sm xs:text-base md:text-md lg:text-base">
       When I'm not coding, you can find me exploring new technologies,
       contributing to open source projects, or sharing insights through my
       writing on Medium.
