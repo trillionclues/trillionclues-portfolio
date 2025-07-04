@@ -4,10 +4,11 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Projects from "@/app/(app)/projects/page";
 import About from "@/app/(app)/about/page";
-import Contact from "@/app/(app)/contact/page";
+import Contact from "@/app/(app)/docs/page";
 import HeroSection from "../navigation/HeroSection";
 import { Section } from "@/types/nav_items";
 import { useSearchParams } from "next/navigation";
+import Docs from "@/app/(app)/docs/page";
 
 const PortfolioApp = () => {
   const searchParams = useSearchParams();
@@ -18,6 +19,7 @@ const PortfolioApp = () => {
       home: <HeroSection />,
       about: <About />,
       projects: <Projects />,
+      docs: <Docs />,
       contact: <Contact />,
     };
 

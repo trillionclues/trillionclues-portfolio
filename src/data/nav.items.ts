@@ -3,14 +3,15 @@ import { Section } from "@/types/nav_items";
 export const NavItems = [
   { id: "about" as Section, label: "About", path: "/about" },
   { id: "projects" as Section, label: "Projects", path: "/projects" },
+  { id: "docs" as Section, label: "Docs", path: "/docs" },
   { id: "contact" as Section, label: "Contact", path: "/contact" },
 ];
 
 export const mediaLinks = [
   {
-    name: "Github",
-    url: "https://github.com/trillionclues",
-    icon: "/github.svg",
+    name: "Resume",
+    url: "https://drive.google.com/file/d/1Nx0lYjSKCFbVgoFbotrGtJiCoX4zx3nU/view",
+    icon: "/resume.svg",
   },
   {
     name: "LinkedIn",

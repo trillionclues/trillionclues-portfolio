@@ -16,7 +16,7 @@ function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm max-w-4xl mx-auto px-6 lg:px-8 h-8"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm max-w-4xl mx-auto px-6 lg:px-8 h-16"
     >
       <div className="flex justify-between items-center py-5 max-w-4xl mx-auto">
         <Link href="/" passHref>

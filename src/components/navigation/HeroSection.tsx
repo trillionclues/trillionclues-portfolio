@@ -23,7 +23,7 @@ const HeroSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
           >
-            Crafting digital <FlipText />.
+            Building digital <FlipText />.
           </MotionH1>
 
           <MotionDiv
@@ -34,9 +34,10 @@ const HeroSection: React.FC = () => {
           >
             <motion.p className="text-base md:text-md text-gray-600 leading-relaxed">
               I'm Excel Nwachukwu, a frontend and mobile engineer based in
-              Lagos, Nigeria. As a software engineer, my primary focus is on on
-              helping startups and teams deliver user-facing products across web
-              and mobile in remittance, e-commerce, and fintech industries.
+              Lagos, Nigeria. As a software developer and design enthusiast, I'm
+              passionate about building intuitive, and performant frontend
+              facing applications in remittance, e-commerce, and fintech
+              industries.
             </motion.p>
 
             <MotionP className="text-base md:text-md text-gray-600 leading-relaxed">

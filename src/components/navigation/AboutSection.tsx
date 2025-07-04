@@ -8,6 +8,8 @@ import {
 } from "@/data/about.skill";
 import { MotionDiv, MotionH2, MotionH3, MotionH4, MotionP } from "@/lib/framer";
 import { useScroll, useTransform } from "framer-motion";
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
 import { useRef } from "react";
 
 const AboutSection = () => {
@@ -78,6 +80,19 @@ const AboutSection = () => {
                   </div>
                 </MotionDiv>
               ))}
+              <MotionDiv
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <Link
+                  href="/"
+                  className="inline-flex items-center gap-2 text-gray-600 hover:text-black transition-colors group"
+                >
+                  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                  Back to Home
+                </Link>
+              </MotionDiv>
             </div>
           </MotionDiv>
         </div>

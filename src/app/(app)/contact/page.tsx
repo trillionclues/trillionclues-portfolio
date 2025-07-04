@@ -1,7 +1,8 @@
+import ContactSection from "@/components/navigation/ContactSection";
 import React from "react";
 
-const Contact = () => {
-  return <div>page</div>;
+const page = () => {
+  return <ContactSection />;
 };
 
-export default Contact;
+export default page;
