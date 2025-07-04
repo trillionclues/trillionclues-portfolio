@@ -1,4 +1,4 @@
-import ContactSection from "@/components/navigation/ContactSection";
+import { ContactSection } from "@/components/navigation";
 import React from "react";
 
 const page = () => {

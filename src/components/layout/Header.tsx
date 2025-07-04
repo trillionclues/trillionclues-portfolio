@@ -3,12 +3,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Section } from "@/types/nav.items";
-import { MotionB, MotionDiv, MotionHeader, MotionSpan } from "@/lib/framer";
-import { NavItems } from "@/data/nav.items";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { Section } from "@/types";
+import { MotionB, MotionDiv, MotionHeader, MotionSpan } from "@/lib";
+import { NavItems } from "@/data";
 
-function Header() {
+export function Header() {
   const pathname = usePathname();
   const activeSection = pathname.split("/")[1] || ("home" as Section);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -105,5 +105,3 @@ function Header() {
     </MotionHeader>
   );
 }
-
-export default Header;

@@ -1,4 +1,4 @@
-import AboutSection from "@/components/navigation/AboutSection";
+import { AboutSection } from "@/components/navigation";
 import React from "react";
 
 const page = () => {

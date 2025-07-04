@@ -1,4 +1,4 @@
-import ProjectSection from "@/components/navigation/ProjectSection";
+import { ProjectSection } from "@/components/navigation";
 import React from "react";
 
 const page = () => {

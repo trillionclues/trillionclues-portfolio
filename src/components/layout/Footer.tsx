@@ -1,9 +1,9 @@
 "use client";
 
-import { MotionDiv } from "@/lib/framer";
+import { MotionDiv } from "@/lib";
 import { useEffect, useState } from "react";
 
-export default function Footer() {
+export function Footer() {
   const [time, setTime] = useState<Date | null>(null);
 
   useEffect(() => {

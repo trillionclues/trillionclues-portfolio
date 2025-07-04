@@ -1,9 +1,9 @@
-import { MotionDiv } from "@/lib/framer";
+import { MotionDiv } from "@/lib";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-const BackButton = ({ href, text }: { href: string; text: string }) => {
+export const BackButton = ({ href, text }: { href: string; text: string }) => {
   return (
     <MotionDiv
       initial={{ opacity: 0, x: -20 }}
@@ -21,5 +21,3 @@ const BackButton = ({ href, text }: { href: string; text: string }) => {
     </MotionDiv>
   );
 };
-
-export default BackButton;

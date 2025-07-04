@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const texts = ["experiences", "solutions", "systems", "products"];
 
-const FlipText: React.FC = () => {
+export const FlipText: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -31,5 +31,3 @@ const FlipText: React.FC = () => {
     </motion.span>
   );
 };
-
-export default FlipText;

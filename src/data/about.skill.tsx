@@ -1,21 +1,32 @@
 import { MotionP } from "@/lib/framer";
-import { Monitor, Smartphone, Code } from "lucide-react";
+import { Monitor, Smartphone, Server, Gauge, Palette } from "lucide-react";
 
 export const skills = [
   {
     icon: <Monitor className="w-6 h-6" />,
-    title: "Frontend Development",
-    desc: "React, Next.js, TypeScript, Tailwind CSS",
+    title: "Frontend Engineering",
+    desc: "React, Next.js, TypeScript, Redux/Zustand, TanStack Query, Tailwind CSS, MUI, GSAP",
   },
   {
     icon: <Smartphone className="w-6 h-6" />,
     title: "Mobile Development",
-    desc: "Flutter, React Native, Native Android",
+    desc: "Flutter, Dart, React Native, Cross-platform, Payment Gateways",
   },
   {
-    icon: <Code className="w-6 h-6" />,
-    title: "Performance & Integration",
-    desc: "REST/GraphQL, WebSocket, Lighthouse optimization",
+    icon: <Palette className="w-6 h-6" />,
+    title: "Design Systems",
+    desc: "Component libraries, Design tokens, WCAG 2.1, Responsive design",
+  },
+  {
+    icon: <Gauge className="w-6 h-6" />,
+    title: "Performance Optimization",
+    desc: "Lighthouse, Code splitting, Lazy loading, Bundle optimization",
+  },
+
+  {
+    icon: <Server className="w-6 h-6" />,
+    title: "DevOps & Deployment",
+    desc: "Docker, AWS, Firebase, CI/CD, Git/GitHub, Vercel",
   },
 ];
 

@@ -1,12 +1,11 @@
 "use client";
 
-import { projects } from "@/data/portfolio";
-import { MotionDiv, MotionH2, MotionH3, MotionP, MotionA } from "@/lib/framer";
-import { ExternalLink, Code, ArrowLeft } from "lucide-react";
+import { ExternalLink, Code } from "lucide-react";
 import { useRef, useState } from "react";
 import { useTransform, useScroll, motion } from "framer-motion";
-import Link from "next/link";
-import BackButton from "../ui/BackButton";
+import { BackButton } from "../../ui";
+import { MotionA, MotionDiv, MotionH2, MotionH3, MotionP } from "@/lib";
+import { projects } from "@/data";
 
 const categories = [
   "All",
@@ -22,7 +21,7 @@ const categories = [
   "Libraries & Frameworks",
 ];
 
-const ProjectSection = () => {
+export const ProjectSection = () => {
   const containerRef = useRef(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -202,5 +201,3 @@ const ProjectSection = () => {
     </div>
   );
 };
-
-export default ProjectSection;

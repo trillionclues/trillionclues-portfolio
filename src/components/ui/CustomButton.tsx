@@ -5,7 +5,7 @@ import { MotionB } from "@/lib/framer";
 
 type ButtonProps = HTMLButtonProps & MotionProps;
 
-const CustomButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const CustomButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       children,
@@ -57,5 +57,3 @@ const CustomButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 CustomButton.displayName = "CustomButton";
-
-export default CustomButton;

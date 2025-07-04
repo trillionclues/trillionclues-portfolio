@@ -1,14 +1,13 @@
 "use client";
 
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Projects from "@/app/(app)/projects/page";
-import About from "@/app/(app)/about/page";
-import Contact from "@/app/(app)/docs/page";
-import HeroSection from "../navigation/HeroSection";
-import { Section } from "@/types/nav.items";
+import { AnimatePresence } from "framer-motion";
 import { useSearchParams } from "next/navigation";
 import Docs from "@/app/(app)/docs/page";
+import { MotionDiv } from "@/lib";
+import { AboutSection, HeroSection, ProjectSection } from "../navigation";
+import { Section } from "@/types";
+import { Contact } from "lucide-react";
 
 const PortfolioApp = () => {
   const searchParams = useSearchParams();
@@ -17,8 +16,8 @@ const PortfolioApp = () => {
   const renderSection = () => {
     const sections = {
       home: <HeroSection />,
-      about: <About />,
-      projects: <Projects />,
+      about: <AboutSection />,
+      projects: <ProjectSection />,
       docs: <Docs />,
       contact: <Contact />,
     };
@@ -29,7 +28,7 @@ const PortfolioApp = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col ">
       <AnimatePresence mode="wait">
-        <motion.div
+        <MotionDiv
           key={activeSection}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -38,7 +37,7 @@ const PortfolioApp = () => {
           className="flex-1 flex flex-col"
         >
           {renderSection()}
-        </motion.div>
+        </MotionDiv>
       </AnimatePresence>
     </div>
   );

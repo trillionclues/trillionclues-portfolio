@@ -1,7 +1,8 @@
+import { DocSection } from "@/components/navigation";
 import React from "react";
 
 const Docs = () => {
-  return <div>page</div>;
+  return <DocSection />;
 };
 
 export default Docs;
