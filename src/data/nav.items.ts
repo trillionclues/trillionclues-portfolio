@@ -1,9 +1,9 @@
 import { Section } from "@/types/nav.items";
 
 export const NavItems = [
-  { id: "about" as Section, label: "About", path: "/about" },
-  { id: "projects" as Section, label: "Projects", path: "/projects" },
+  { id: "work" as Section, label: "Work", path: "/work" },
   { id: "docs" as Section, label: "Docs", path: "/docs" },
+  { id: "about" as Section, label: "About", path: "/about" },
   { id: "contact" as Section, label: "Contact", path: "/contact" },
 ];
 

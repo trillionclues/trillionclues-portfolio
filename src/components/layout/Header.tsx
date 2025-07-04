@@ -83,7 +83,7 @@ export function Header() {
 
         <div className="md:hidden flex items-center" ref={mobileMenuRef}>
           <MotionB
-            className="flex items-center gap-1 text-xs font-medium text-gray-900"
+            className="flex items-center gap-1 text-xs font-medium text-gray-900 cursor-pointer"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             whileTap={{ scale: 0.95 }}
           >

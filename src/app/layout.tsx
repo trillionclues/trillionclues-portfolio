@@ -21,7 +21,7 @@ const andika = Andika({
 });
 
 export const metadata: Metadata = {
-  title: "Trillionclues - Mobile Developer",
+  title: "Trillionclues - Frontend Engineer, Mobile Developer and Writer",
   description:
     "Frontend and Mobile Developer specializing in React, Flutter, and modern web technologies.",
   keywords: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   creator: "Trillionclues",
   openGraph: {
-    title: "Trillionclues - Mobile Developer",
+    title: "Trillionclues - Frontend Engineer, Mobile Developer and Writer",
     description:
       "Frontend and Mobile Developer specializing in React, Flutter, and modern web technologies.",
     siteName: "Trillionclues Portfolio",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trillionclues - Mobile Developer",
+    title: "Trillionclues - Frontend Engineer, Mobile Developer and Writer",
     description:
       "Frontend and Mobile Developer specializing in React, Flutter, and modern web technologies.",
     images: ["https://trillionclues.dev/og.png"],
