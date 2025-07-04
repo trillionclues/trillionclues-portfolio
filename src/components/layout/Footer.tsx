@@ -37,7 +37,7 @@ export default function Footer() {
   const seconds = time.getSeconds();
 
   return (
-    <footer className="fixed bottom-0 left-0 right-0 z-50 backdrop-blur-sm max-w-4xl mx-auto">
+    <footer className="fixed bottom-0 left-0 right-0 z-50 max-w-4xl mx-auto h-16 backdrop-blur-sm">
       <div className="px-6 lg:px-8">
         <MotionDiv
           className="flex items-center justify-between py-6"

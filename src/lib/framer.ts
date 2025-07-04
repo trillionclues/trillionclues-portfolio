@@ -27,6 +27,9 @@ export const flipText = {
 
 export const MotionDiv = motion.div;
 export const MotionH1 = motion.h1;
+export const MotionH2 = motion.h2;
+export const MotionH3 = motion.h3;
+export const MotionH4 = motion.h4;
 export const MotionHeader = motion.header;
 export const MotionP = motion.p;
 export const MotionB = motion.button;

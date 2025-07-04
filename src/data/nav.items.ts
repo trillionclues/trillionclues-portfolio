@@ -22,4 +22,9 @@ export const mediaLinks = [
     url: "https://twitter.com/trillionclues",
     icon: "/twitter.svg",
   },
+  {
+    name: "Medium",
+    url: "http://trillionclues.medium.com/",
+    icon: "/medium.svg",
+  },
 ];

@@ -68,11 +68,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={` ${arvo.variable} ${andika.variable} antialiased min-h-screen flex flex-col bg-white`}
+        className={`${arvo.variable} ${andika.variable} antialiased min-h-screen flex flex-col bg-white/80`}
       >
         <Suspense fallback={<div>Loading...</div>}>
           <Header />
-          <main>{children}</main>
+          <main className="flex-1 pt-[height-of-header] pb-[height-of-footer]">
+            {children}
+          </main>
           <Footer />
         </Suspense>
       </body>
