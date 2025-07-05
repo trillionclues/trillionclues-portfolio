@@ -4,5 +4,11 @@ export interface ProjectCardProps {
   leftSkew?: MotionValue<number>;
   rightSkew?: MotionValue<number>;
   index: number;
-  project: any;
+  project: {
+    title: string;
+    description: string;
+    liveLink: string;
+    technologies: string[];
+    featured: boolean;
+  };
 }
