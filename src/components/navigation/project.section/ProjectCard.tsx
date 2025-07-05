@@ -1,5 +1,5 @@
 import { getTechColor } from "@/data";
-import { MotionA, MotionDiv, MotionH3, MotionP, MotionSpan } from "@/lib";
+import { MotionA, MotionDiv, MotionH3, MotionP } from "@/lib";
 import { ProjectCardProps } from "@/types";
 import { Code } from "lucide-react";
 import React from "react";

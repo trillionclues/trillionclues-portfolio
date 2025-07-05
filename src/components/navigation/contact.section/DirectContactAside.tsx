@@ -1,12 +1,7 @@
 import { mediaLinks } from "@/data";
 import { MotionA, MotionDiv, MotionH2, MotionH3 } from "@/lib";
 import { MotionValue } from "framer-motion";
-import {
-  ArrowUpRight,
-  Mail,
-  MapPin,
-  MessageSquareTextIcon,
-} from "lucide-react";
+import { ArrowUpRight, MapPin, MessageSquareTextIcon } from "lucide-react";
 import React from "react";
 
 export const DirectContactAside = ({
