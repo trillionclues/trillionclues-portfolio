@@ -1,7 +1,12 @@
 import { mediaLinks } from "@/data";
 import { MotionA, MotionDiv, MotionH2, MotionH3 } from "@/lib";
 import { MotionValue } from "framer-motion";
-import { ArrowUpRight, Mail, MapPin } from "lucide-react";
+import {
+  ArrowUpRight,
+  Mail,
+  MapPin,
+  MessageSquareTextIcon,
+} from "lucide-react";
 import React from "react";
 
 export const DirectContactAside = ({
@@ -23,12 +28,12 @@ export const DirectContactAside = ({
         </MotionH2>
         <div className="space-y-2">
           <MotionA
-            href="mailto:trillionclues@gmail.com"
+            href="https://cal.com/naijatechguy"
             className="flex items-center gap-3 text-gray-700 hover:font-bold transition-colors"
             whileHover={{ x: 5 }}
           >
-            <Mail className="w-5 h-5 text-gray-400 flex-shrink-0" />
-            <span>exceln646@gmail.com</span>
+            <MessageSquareTextIcon className="w-5 h-5 text-gray-400 flex-shrink-0" />
+            <span>Schedule a meet</span>
           </MotionA>
 
           <MotionDiv
@@ -36,7 +41,7 @@ export const DirectContactAside = ({
             whileHover={{ x: 5 }}
           >
             <MapPin className="w-5 h-5 text-gray-400 flex-shrink-0" />
-            <span>Lagos, Nigeria (Open to remote EMEA)</span>
+            <span>Lagos, Nigeria (Open to EMEA roles)</span>
           </MotionDiv>
         </div>
       </div>

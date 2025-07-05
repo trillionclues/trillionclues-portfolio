@@ -15,7 +15,7 @@ export const skills = [
   {
     icon: <Palette className="w-6 h-6" />,
     title: "Design Systems",
-    desc: "Component libraries, Design tokens, WCAG 2.1, Responsive design",
+    desc: "Component libraries, Design tokens, WCAG 2.1, Responsive design, Framer Motion",
   },
   {
     icon: <Gauge className="w-6 h-6" />,

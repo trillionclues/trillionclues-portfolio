@@ -37,7 +37,7 @@ export const useMediumArticles = (
             description:
               article.description
                 .replace(/<[^>]+>/g, "")
-                .substring(0, 200)
+                .substring(0, 100)
                 .trim() + "...",
           };
         });

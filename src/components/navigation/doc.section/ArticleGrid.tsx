@@ -31,7 +31,7 @@ const ArticleGrid = ({
             transformPerspective: 1000,
             skewY: index % 2 === 0 ? leftSkew : rightSkew,
           }}
-          className="group cursor-pointer border border-gray-200 rounded-xl p-4 hover:shadow-md transition-all"
+          className="group cursor-pointer border border-gray-200 rounded-lg  p-4 hover:shadow-sm transition-all"
         >
           {article?.thumbnail && (
             <div className="aspect-video bg-gray-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
